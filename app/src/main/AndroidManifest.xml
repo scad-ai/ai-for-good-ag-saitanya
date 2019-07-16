@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ksaitanya.agroaid">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="Agro-Aid"
+        android:theme="@style/MaterialTheme">
+        <activity
+            android:name=".First"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Identify"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Weather"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Plant"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Nutrients"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClassifierActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".More"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Tool"></activity>
+    </application>
+
+</manifest>

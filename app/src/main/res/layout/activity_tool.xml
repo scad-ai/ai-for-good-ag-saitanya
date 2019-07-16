@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ksaitanya.agroaid.Tool"
+    android:background="@drawable/allback">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom"
+        android:background="#390062"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/back"
+        android:id="@+id/back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TOOLS"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scrollbars="none"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/textView5">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_below="@+id/about"
+            android:layout_alignParentStart="true">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:text="Ancient Plough"
+                    android:id="@+id/pb"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ff6567" />
+            </TableRow>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="155dp"
+                android:id="@+id/ppic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/plough"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="A plough is a tool used for the cultivation of soil for sowing seed or planting to loosen or turn the soil. Earlier, ploughs were drawn by working animals such as horses or cattle, but in modern times they are drawn by tractors.\nA plow may be made of wood, iron, or steel frame with an attached blade or stick used to cut the earth. It has been a basic instrument for most of recorded history. It is important to plough straight in the field. And therefore mark a landmark to go straight towards it."
+                android:id="@+id/pt"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/pup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right"
+                android:background="@drawable/ic_collapse_large_holo_light" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ff6591"
+                    android:text="Pick AXE"
+                    android:id="@+id/ab" />
+            </TableRow>
+            <ImageView
+                android:layout_width="230dp"
+                android:layout_height="190dp"
+                android:id="@+id/apic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:background="@drawable/axe" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="A pickaxe or pick-axe or pick is a hand tool with a very hard head attached perpendicular to the handle. The head is usually made of metal, and the handle is most commonly wood, fiberglass or metal. The head is a spike ending with a sharp point, the curve slightly, and often has a counter-weight to improve use ease. The stronger the spike, the more effectively the tool can pierce the surface. Rocking the embedded spike about and removing it can tend to break the surface. "
+                android:id="@+id/at"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/aup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ff65f2"
+                    android:text="Water Barrel"
+                    android:id="@+id/bb" />
+            </TableRow>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="215dp"
+                android:id="@+id/bpic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/barrel"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="The water barrel is used to store the water. There are different sizes in the water barrel. They can be made up of wood, and plastic. Used for drip system in agriculture."
+                android:id="@+id/bt"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/bup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78c465ff"
+                    android:text="Weir Box"
+                    android:id="@+id/wb" />
+            </TableRow>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="155dp"
+                android:id="@+id/wpic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/weir"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="A weir box is a barrier which is placed across the horizontal width of the river. This is used to alter the flow of water and usually results in a change of the height of the river level. This is commonly used for the free flow of water over the top of the weir crest."
+                android:id="@+id/wt"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/wup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#7865c7ff"
+                    android:text="Curved Knife Harrow"
+                    android:id="@+id/hb" />
+            </TableRow>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="155dp"
+                android:id="@+id/hpic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/harrow"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="It is a type of motorized harrow with twisted blades spaced several inches apart. Chiefly used by the gardeners these are also known as rototillers. It is also known as the Acme harrow or clod crusher. It is used to destroy small weeds."
+                android:id="@+id/ht"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/hup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#7865ffea"
+                    android:text="Digging Fork"
+                    android:id="@+id/fb" />
+            </TableRow>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/fpic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/fork"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="There are many types of garden forks. Each type of fork is made for the specific purposes. The basic garden fork, or compost fork, is a large fork with four to eight tines shaped with a horizontal curve and the slight upward curve at the bottom of the tines. These forks are used to move compost, mulch or soil. The curves in the tines help to scoop up a large heap of mulch or compost to spread it into the garden or turn and mix compost piles. This type of fork is more similar to a pitchfork.  Digging forks are also used to dig up plants with tough, massive root structures. These can be garden plants that you intend to transplant or divide or patches of pesky weeds."
+                android:id="@+id/ft"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/fup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#7865ff93"
+                    android:text="Drag Hoe"
+                    android:id="@+id/hob" />
+            </TableRow>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="220dp"
+                android:id="@+id/hopic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/hoe"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="It is an ancient and versatile agricultural tool. The horticultural hand tool is used to shape soil, remove weeds, clean soil, and harvest root crops. Shaping the soil will help in supporting the soil around the base of plants (hilling), digging narrow furrows (drills) and shallow trenches for planting seeds or bulbs. Weeding with a hoe has mixed surface of the soil or cutting foliage from roots. Hoes are used for digging and moving soil are also used for harvest root crops such as potatoes. "
+                android:id="@+id/hot"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/houp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:text="Land Roller"
+                    android:id="@+id/rb"
+                    android:background="#78bcff65" />
+            </TableRow>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="190dp"
+                android:id="@+id/rpic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/roller"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="It is an equipment used to flatten land, break up large clumps of soil and press rocks down below the surface of a field. When there are smooth fields, crops can be harvested faster and with less chance of damage to the equipment. The packed soil prevents weed growth, enables better germination, and helps to minimize the loss of soil moisture."
+                android:id="@+id/rt"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/rup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:text="Large Grass Shear"
+                    android:id="@+id/sb"
+                    android:background="#78fff065" />
+            </TableRow>
+            <ImageView
+                android:layout_width="270dp"
+                android:layout_height="155dp"
+                android:id="@+id/spic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shear"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="It is specifically designed to meet the requirements of the job in hand, from trimming topiary to lawn edging, to hedging. Cutting through green matter such as damp grass actually requires the sharpest of blades. The blades of our tools are razor sharp and are designed to stay sharp. The majority of the blades are made up of high carbon steel, precision hardened and the tool will be used. The tool is used to tempered to the correct Rockwell value for the particular task."
+                android:id="@+id/st"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/sup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ffa365"
+                    android:text="Lawm Mower"
+                    android:id="@+id/mb" />
+            </TableRow>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="190dp"
+                android:id="@+id/mpic"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/mower"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="It is a machine utilizing one or more revolving blades to cut a grass surface to an even height. The height of the cut grass can be fixed by using the design of the mower, but generally, it is adjustable by the user or operator of the tool, adjusted by a single master lever, or by a lever or nut and bolt of the machine&apos;s wheels.  The blades may be powered with wheels mechanically connected to the cutting blades so that when the mower is pushed forward, the blades spin and the machine may have a battery-powered or plug-in electric motor. The power source for lawn mowers is from the internal combustion engine. Smaller mowers work with the help of human power to move over a surface &quot;walk-behind&quot; mowers are self-propelled, requiring a human only to walk behind and guide them. "
+                android:id="@+id/mt"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/mup"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

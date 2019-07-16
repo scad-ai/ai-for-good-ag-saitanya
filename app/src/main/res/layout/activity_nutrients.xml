@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/allback">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom"
+        android:background="#390062"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/back"
+        android:id="@+id/back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="NUTRITION CHART"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scrollbars="none"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/textView5">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_below="@+id/about"
+            android:layout_alignParentStart="true">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:text="Rice"
+                    android:id="@+id/ricepic"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ff6567" />
+            </TableRow>
+            <ImageView
+                android:layout_width="325dp"
+                android:layout_height="325dp"
+                android:id="@+id/plough"
+                android:background="@drawable/rice"
+                android:adjustViewBounds="false"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone" />
+             <ImageButton
+                 android:id="@+id/upr"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right"
+                 android:background="@drawable/ic_collapse_large_holo_light" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:background="#78ff6591"
+                     android:text="Wheat"
+                     android:id="@+id/wheatpic" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="325dp"
+                 android:layout_height="325dp"
+                 android:id="@+id/axe"
+                 android:background="@drawable/wheat"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp"
+                 android:visibility="gone" />
+             <ImageButton
+                 android:id="@+id/upw"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:background="#78ff65f2"
+                     android:text="Maize"
+                     android:id="@+id/maizepic" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="325dp"
+                 android:layout_height="280dp"
+                 android:id="@+id/barrel"
+                 android:background="@drawable/maize"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:nestedScrollingEnabled="false"
+                 android:layout_marginBottom="10dp"
+                 android:visibility="gone" />
+             <ImageButton
+                 android:id="@+id/upma"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:background="#78c465ff"
+                     android:text="Sugarcane"
+                     android:id="@+id/sugercanepic" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="350dp"
+                 android:layout_height="325dp"
+                 android:id="@+id/weir"
+                 android:background="@drawable/sugarcane"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp"
+                 android:visibility="gone" />
+             <ImageButton
+                 android:id="@+id/ups"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:background="#7865c7ff"
+                     android:text="Coffee"
+                     android:id="@+id/coffeepic" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="325dp"
+                 android:layout_height="200dp"
+                 android:id="@+id/harrow"
+                 android:background="@drawable/coffee"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp"
+                 android:visibility="gone" />
+             <ImageButton
+                 android:id="@+id/upc"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:background="#7865ffea"
+                     android:text="Tea"
+                     android:id="@+id/teapic" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="300dp"
+                 android:layout_height="200dp"
+                 android:id="@+id/fork"
+                 android:visibility="gone"
+                 android:background="@drawable/tea"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp" />
+             <ImageButton
+                 android:id="@+id/upte"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:layout_gravity="right"
+                 android:visibility="gone" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:background="#7865ff93"
+                     android:text="Lemon"
+                     android:id="@+id/lemonpic" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="300dp"
+                 android:layout_height="700dp"
+                 android:id="@+id/hoe"
+                 android:visibility="gone"
+                 android:background="@drawable/lemon"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp" />
+             <ImageButton
+                 android:id="@+id/upl"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:text="Mirch"
+                     android:id="@+id/mirchpic"
+                     android:background="#78bcff65" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="325dp"
+                 android:layout_height="400dp"
+                 android:id="@+id/mower"
+                 android:visibility="gone"
+                 android:background="@drawable/mirch"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp" />
+             <ImageButton
+                 android:id="@+id/upm"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:textAlignment="center">
+                 <Button
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:textColor="#ffffff"
+                     android:layout_alignParentStart="true"
+                     android:text="Tomato"
+                     android:id="@+id/tomatopic"
+                     android:background="#78fff065" />
+             </TableRow>
+             <ImageView
+                 android:layout_width="325dp"
+                 android:layout_height="500dp"
+                 android:id="@+id/roller"
+                 android:visibility="gone"
+                 android:background="@drawable/tomato"
+                 android:adjustViewBounds="false"
+                 android:layout_marginTop="10dp"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginBottom="10dp" />
+             <ImageButton
+                 android:id="@+id/upt"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentRight="true"
+                 android:background="@drawable/ic_collapse_large_holo_light"
+                 android:clickable="true"
+                 android:visibility="gone"
+                 android:layout_gravity="right" />
+
+
+         </LinearLayout>
+     </ScrollView>
+
+ </RelativeLayout>

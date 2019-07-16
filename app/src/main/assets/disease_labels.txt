@@ -1,0 +1,12 @@
+Bacterial Blight Disease
+Blackspots Disease
+Coffee Plant
+Daisy Plant
+Powdery Mildew Disease
+Rice Plant
+Rose Plant
+Sugarcane Plant
+Sunflower Plant
+Tea Plant
+Tulip Plant
+Wheat Plant

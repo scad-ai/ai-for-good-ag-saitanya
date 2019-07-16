@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#ce07083f">
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@android:drawable/ic_delete"
+        android:id="@+id/closec"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:fillViewport="false"
+        android:scrollbars="none"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_below="@id/closec"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="17dp"
+        android:background="#8d17639c">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/scrollView">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/user"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Expert 1"
+                    android:id="@+id/e1"
+                    android:layout_toEndOf="@+id/imageView1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/call1"
+                    android:background="@drawable/call"
+                    android:layout_above="@+id/imageView"
+                    android:layout_toEndOf="@+id/imageView1"
+                    android:layout_marginLeft="10dp" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/msg"
+                    android:id="@+id/msg1"
+                    android:layout_alignTop="@+id/call1"
+                    android:layout_toEndOf="@+id/call1"
+                    android:layout_marginLeft="10dp" />
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/imageView"
+                    android:background="@drawable/user"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Expert 2"
+                    android:id="@+id/e2"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_alignTop="@+id/imageView"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/call2"
+                    android:background="@drawable/call"
+                    android:layout_above="@+id/imageView2"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:layout_marginLeft="10dp" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/msg"
+                    android:id="@+id/msg2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_above="@+id/imageView2"
+                    android:layout_toEndOf="@+id/call2" />
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/imageView2"
+                    android:background="@drawable/user"
+                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Expert 3"
+                    android:id="@+id/e3"
+                    android:layout_alignTop="@+id/imageView2"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/call"
+                    android:id="@+id/call3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/imageView2" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/msg"
+                    android:id="@+id/msg3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/call2" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

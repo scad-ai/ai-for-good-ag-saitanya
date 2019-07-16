@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/allback">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom"
+        android:background="#390062"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/back"
+        android:id="@+id/back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp" />
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="STEPS TO PLANT"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scrollbars="none"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/textView5">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_below="@+id/about"
+            android:layout_alignParentStart="true">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="Rice"
+                android:id="@+id/ricepic"
+                android:layout_alignParentStart="true"
+                android:background="#78ff6567" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="To plant a paddy crop, while farmers use land, indoor plantation can be done in a garden or a bucket.\n1. Obtain rice seeds from any gardening or farmer’s supply store. You may also take help from the local agriculture field officer.\n2. Choose the location with a long, warm growing season of 3 to 6 months (min 21° Celsius).\n3. If using buckets, fill them with 6 inches of moist soil.\n4. Soak the seeds in water for 12 to 30 hours, before sowing.\n5. Plant the soaked seeds throughout the soil, during the fall or spring season, preferably in rows.\n6. To prevent crowding, space out the rice seeds.\n   -> Gap between seeds: Not more than 4 inches apart.\n   -> Gap between rows: 9 to 12 inches apart.\n7. Fill the soil with more than 2 inches of water.\n8. Keeping the soil constantly wet, observe the water levels.\n9. Wait until the plants are about 17 inches tall, when the rice grains mature.\n10. Dry out any excess water and let the plants turn gold.\n11. Cut the stalks and let the seeds dry.\n12. Bake them for an hour, at the temperature of 180°F (82°C).\n13. In the end, separate the kernels from the hulls."
+                android:id="@+id/aboutr"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right"
+                android:background="@drawable/ic_collapse_large_holo_light" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_alignParentStart="true"
+                android:background="#78ff6591"
+                android:text="Wheat"
+                android:id="@+id/wheatpic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Determine how much space you have (1,000 square feet --> 30 kg).\n2. Determine the type of wheat you'll plant i.e. Winter wheat or Spring wheat.\n3. Choose your planting location with 8 hours of direct sun everyday Wheat is not recommended for gardening in a pot.\n4. Time the planting season when the temperatures are approaching 21 to 24°C.\n5. Till the soil to a depth of 6 inches.\n6. The soil needs to be rich brown in color and moist. Else, spread a layer of compost.\n7. Sow the seeds having approximately 1 seed per 1 square inch of space.\n8. Rake the seeds to get them into the soil.\n9. Cover the seed with a 1.5 to 2.5 inches of soil. Remember not to cover more than 3 inches.\n10. Water your newly planted seeds such that the area is soaked well, specially during dry seasons.\n11. Weed as needed and Protect your crop from pests.\n12. Moisture content of the plant is crucial to determine when to harvest. Optimal : 20% and 14% moisture.\n13. Harvest the plant and separate the grain and let it dry before storing."
+                android:id="@+id/aboutw"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upw"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ff65f2"
+                    android:text="Maize"
+                    android:id="@+id/maizepic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="1. The best time to plant is between May and June. The soil temperature needs to be minimum 18ºC, else the seeds will rot.\n2. To increase the temperature of the soil, cover the area with a black transparent sheet.\n3. Choose a location with plenty of sun and zero weeds. After the plant grows till knee high, it can fight the weeds on its own.\n3. Corn requires Nitrogen Rich soil. If required add compost and manure 2 to 4 weeks before planting\n4. Plant corn seeds in blocks for best pollination.\n   -> Gap between seeds : 3 inches\n   -> Gap between rows: 24–36 inches.\n   -> Depth to plant: 1–2 inches below the surface.\n5. To increase the probability of yield, plant 2-3 seeds together.\n6. Water the area to 1 inch every week and apply water to the base of the plant.\n7. The corn is completely grown 3 weeks after it develops the golden silk hair on it.\n8. Then, check for tightly packed kernels and puncture them. If it produces a milky fluid (Not watery), harvest the corn by picking."
+                android:id="@+id/aboutma"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upma"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78c465ff"
+                    android:text="Sugarcane"
+                    android:id="@+id/sugercanepic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="Sugarcane is planted during winter and it sprouts in spring, eventually growing as tall as bamboo. To plant a sugarcane.\n1. Collect long and thick sugarcane stems. These stems have joints and a new plant will sprout from each one.\n2. Cut the stems into foot-long pieces, with three to four joints per piece.\n3. If the stems have any leaves or flowers, remove them.\n4. Choose a sunny space and dig long furrows of 4 inch depth, using spade or hoe.\n5. Lightly moist the furrow with water and ensure there are no puddles of water left before planting.\n6. Horizontally place 1 stem piece in each furrow and cover the furrow with soil.\n    Note: Do not plant the stem straight.\n7. New individual sugarcane plants will start to break through the spoil from the joints of the sugarcane stems.\n8. Add Nitrogen rich compost only once\n9. Let the sugarcane grow as tall as possible and harvest before the cold weather starts.\n10. Cut the grown sugarcane stem close to ground and don't dig into the ground, so that the roots are protected for another cycle of sugarcane plant."
+                android:id="@+id/abouts"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/ups"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#7865c7ff"
+                    android:text="Coffee"
+                    android:id="@+id/coffeepic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="Coffee can be grown indoors or outdoors. But coffee tree takes 9 years to fully mature from seeds.\n1. It is best to use freshly picked and riped coffee cherries that are rimson in color.\n   -> Crush the cherries to get the inner beans. Rinse the beans and allow them to ferment till the pulp falls off.\n   -> Wash the beans in water and discard the ones that float.\n   -> Dry out the beans till they are dry on the outside and moist inside.\n2. If coffee cherries are not available, green beans can be purchased from market.\n   -> These beans should be recently harvested (Less than 4 months) for 100% germination.\n   -> Soak the  beans in water for 24 Hours.\n3. Initially, the seed is planted in a temporary location. For this, fill a 30 ML container with agricultural soil and spray water to moist a layer of soil.\n4. Place the seeds (beans) just below the moist layer.\n5. Ensure the seeds are moist by watering 2 times a day but do not soak them in water.\n6. After the seeds germinate, transfer the sapling along with roots to a deeper container with humus rich soil. Make a 1/2 inch deep hole in the soil and place the flat side of the seed facing inside.\n7. Sprinkle some soil and donnot press.\n8. When the coffee sapling develops into a seedling, transfer it into a permanant location indoor or outdoor.\n9. The above steps can be skipped by purchasing a 3 to 4 inches tall seedling from nursery and planting into a permanent location.\n10. Criteria to select permanant location\n    -> Outdoors: Hot and humid climate, relatively shady and deep and porous soil.\n    -> Indoors: Deep container of 100 L in a room with 4-5 hours of direct sunlight or bright artificial lighting, 15-27 °C temperatures throughout the day and minimum 7 °C at night.\n11. Plant the seedlings by making a hole large enough to fit the root.\n12. Cover the soil with dried leaves and grass to retain moisture.\n13. Maintain the moisture by reguarly watering till it develops into a tree. Afterwhich, water it once a week.\n14. Once the tree starts to bear cherries, pluck the ones that are fully grown.\n15. Remove the crimson beans from the cherries, soak them in water for several days and dry them for 7 days.\n16. Now, you can remove another layer to get green beans.\n17. Roast the green beans for 10 minutes in an oven preheated to 200 °C."
+                android:id="@+id/aboutc"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upc"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#7865ffea"
+                    android:text="Tea"
+                    android:id="@+id/teapic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="There are two main types of tea plants. (i) Sinensis and (ii) Assamica of which Sinesis is recommended for several reasons.\n1. Starting with the seeds, buy Camellia Sinensis seeds at a local store or online.\n   -> Soak the seeds, fully submerged in water for 24 to 48 hours.\n   -> Next, place seeds into separate containers and put the containers in a warm and sunny location.\n   -> Spray the seeds with water and wait a few minutes.\n   -> Then, cover the seeds with 1 inch of coarse vermiculite to retain moisture.\n   -> Let the seeds germinate to produce small roots and couple of sprouts for 6 to 8 weeks.\n   -> Plant the germinated seeds in pots and place them indoors.\n2. Start with the plant if you want to jumpstart the growing process.\n3. Ensure the soil is moist\n4. Once the plant grows 8 inches tall, transfer it outdoors or a 6 inches deep pots. If planting outside, plant multiple plants 3 inches apart in a sunny cum shady location.\n5. Water the plant everyday.\n6. It takes 3 years for the plant to mature to a tress of 3 feet.\n7. Pluck the green leaves once the tree matures and check the process to make tea online"
+                android:id="@+id/aboutte"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upte"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_alignParentStart="true"
+                android:background="#7865ff93"
+                android:text="Lemon"
+            android:id="@+id/lemonpic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="1. Prepare your potting soil in a bucket by adding water till it's damp but not soggy.\n2. Choose a small pot for one seed which has drainage holes\n   -> Diameter: 3-4 4 inches.\n   -> Depth: 5-6 inches.\n3. Fill the pot with the soil till the surface of the soil is about 1 inch below the rim.\n4. Make a hole in the soil of 1/2 inch deep.\n5. Choose a seed of lemon which looks plump and wash it.\n6. Drop the seed into the hole and cover it with soil.\n7. Cover the pot with a piece of breathable plastic to keep its warmth and moisture and place it in a warm place with temperature at 20°C and 28°C.\n8. Water the soil when it is becoming dry.\n9. Remove the plastic cover once the sprout appears and transfer the pot to a warm and sunny location.\n10. Water your plant regularly, about 2 or 4 times per week.\n11. Make sure that seedlings get enough sunlight. Lemon trees require at least 8 hours of sunlight while the seedlings will require 10 to 14 hours.\n12. If you can see roots through the drainage holes, it is time to transplant the tree to a new and bigger pot. You may need to transplant multiple times.\n13. The soil pH level should be constant between 5.7 t0 6.5 pH.\n14. Provide the proper nutrients to the tree so that it grows healthy and strong.\n15. It will take 5-15 years before your tree can bear fruit."
+                android:id="@+id/aboutl"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upl"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_alignParentStart="true"
+                android:text="Mirchi"
+            android:id="@+id/mirchpic"
+                android:background="#78bcff65" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="1. Place the seeds in between two damp paper towels and  put the whole thing in a zip lock bag or plastic container and seal it shut.\n2. Store the seeds somewhere in a constant warm place (23-30°C)for 2-5 days to germinate.\n3. Fill a planting tray with compost to the brim and water the soil before sowing the seeds.\n4. Disperse the chilli seeds 2 inches apart. Add some compost over the seeds and spray water.\n5. Cover the tray with a plastic sheet and place it in the same warm place to germinate the chili seeds.\n6. Monitor the seedlings of the chili by keeping the compost moist and not wet.\n7. Remove the seedlings from the tray, once they are 2 inches and do it very carefully, so that the roots are not disturbed.\n8. Plant each seedling into an individual pot of 2.75 inches diameter.\n9. Keep your plant in a warm and bright lit place i.e. outside under the sun or near a window.\n10. Change the size of pot you use, when it is needed and water and feed the plant frequently."
+                android:id="@+id/aboutm"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_alignParentStart="true"
+                android:text="Tomato"
+            android:id="@+id/tomatopic"
+                android:background="#78fff065" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="1. Find a location that receives 6-8 hours of sunlight everyday and plant the seeds directly in the ground, if possible.\n2. Create raised beds. Raised bed is an area of soil that is raised above the ground and enclosed by a wooden frame.\n3. Alternatively use containers if you have limited space. For example: Install window boxes in upper-story windows or hang your pot(s).\n4. Buy the sapling from nurseries, garden centers, or farmers’ markets.\n5. Add 25-40 kG per square meter of compost to the garden soil covering the top 3 inches with it.\n6. Maintain the soil pH between 6.0 and 6.8.\n7. Plating on the ground, space the plants 18 to 36 inches apart.\n8. Transplant the plant deeply with about 50 to 80 percent of the plant inside the soil.\n9. Cage or stake your tomatoes.\n10. Water about 500 mL of water per plant every day and after 1 week, water every 7 to 10 days.\n11. Apply mulch after 1-2 weeks.\n12. Choose an organic fertilizer to enrich the soil.\n13. Shake your plant poles or cages carefully to even distribute pollen seeds.\n14. Check if there are any suckers that grow between the main stem and other branches and pinch them off.\n15. Control the humidity. Tomato plants require high humidity (80-90%) during the day and moderate humidity (65-75%) at night.\n    -> Humidity over 90 percent and below 65 percent can trigger blossom end rot.\n16. If you live in a very humid climate, your best bet for outdoor tomatoes is to grow humidity-tolerant varieties, such as Feline, Legend, Fantasia.\n17. Keep the plant away from excessive heat. If the fruit starts to ripen during an intense heat wave, harvest the fruit early.\n18. Prevent blossom-end rot by adding calcium to the soil."
+                android:id="@+id/aboutt"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ffa365"
+                    android:text="Rose"
+                    android:id="@+id/rosepic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="Rose can be either grown from seeds or using a stem. This a guide to plant rose using a stem.\n1. There are two types of stems, bare root i.e. without any flowers, and container roses i.e. with flowers. Choose any one type.\n2. Choose a planting location with at least 5-6 hours of direct sunlight each day in the morning and little shade by afternoon.\n3. Materials needed: -> Fertilizer\n                     -> Pruning shears\n                     -> Gardening gloves\n                     -> Compost\n                     -> A spade\n                     -> A shovel\n                     -> A pot\n4. Dig a hole in a pot or on ground that is bigger than the plant roots. If planting more than 1 plants, dig holes 4 feet apart. If planting container roses, the hole should be as deep as the plant's pot and at least two times as wide.\n5. Mix compost with the soil in the hole.\n6. Place the rose plant in the hole, covering the roots in the soil and the stem above the soil surface. Shovel the soil around and pat down the soil as you fill the hole.\n7. For container rose, remove the plastic or cardboard container and loose the soil around the roots before planting.\n8. To maintain the plants health, keep the soil hydrated by watering regularly.\n9. Bare root rose can be kept hydrated by making a 6 inch high soil mould around the plant till buds come out."
+                android:id="@+id/aboutro"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upro"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:background="#78ff6565"
+                    android:text="Aloe Vera"
+                    android:id="@+id/aloepic" />
+            </TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:text="1. Choose a location where the plant can receive 8 hours of sunlight and the temperature is above -4ºC through day and night.\n2. Prepare water draining soil as Aloe Vera survives in dry conditions. Use potting mix or make your own mix with equal parts soil, sand and gravel.\n3. You can either plant a leaf or buy a container plant from a shop.\n4. Take a big enough pot and make sure it has a whole on base for excess water to drain.\n5. Methods to plant\n   -> Fill the pot with soil and place the leaf flat in the soil and press a little such that its partly inside the soil and partly exposed to air. Water the plant sufficiently till it develops in a sapling.\n   -> Place the container plant in the pot and cover the root with soil but do not let the leaves touch the soil. Don't water the plant for 3-4 days and water sufficiently after wards."
+                android:id="@+id/abouta"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:paddingTop="15dp" />
+            <ImageButton
+                android:id="@+id/upa"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_collapse_large_holo_light"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="right" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

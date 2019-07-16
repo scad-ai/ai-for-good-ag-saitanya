@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="disease"> Disease Attack </string>
+    <string name="pest">Pest Attack</string>
+    <string name="nutrient">Nutrient Deficiency</string>
+    <string name="back">Back</string>
+    <string name="abouttext">Developers:\n
+K. Sai Tanya\n
+R. Meghana\n
+Electronics and Computer Engineering\n
+Sreenidhi Institute of Science and Technology\n
+Welcome to our application - Agro Aid.\n
+Are you a farmer or a gardening enthusiast? Do you generally face issue with disease/pest attack and nutrient deficiency for your plant? Over time, the severity of these problems has increased and resulted in losses of crop and plants.
+    \nAccording to a study by the Associated Chambers of Commerce and Industry of India, the annual crop losses amount to Rs.50,000 crore($500 billion) due to disease attack, pest attack and nutrient deficiency.
+
+\n\n"<i>Concerted efforts are needed to forge an R and D-led strategy to save the loss of crops due to pests, weeds and diseases.</i>"
+\n-Hukmdev Narayan Yadav
+\nChairman, Standing Committee of parliament on Agriculture and Farmers Welfare in 2016.
+\n\nIn the vision for digital India, the government is looking for digital solutions enabling identification of disease attacks, pest attacks and nutrient deficiency and take appropriate steps in real time. Taking the inspiration, our project goal is to develop a simple application for    phones that can identify crop diseases, pest damages and nutrient deficiency symptoms by analyzing the pictures taken by the user. So lets this started with the app.
+\nThis is the Home page with 6 options.
+	\n-> Identify Nutrient Deficiency.
+\nChoose this option if you want to identify any nutrient deficiency in plant.
+	\n-> Identify Disease attack
+\nChoose this option if you want to identify any disease attack in plant.
+	\n-> Identify Pest attack
+\nChoose this option if you want to identify any pest attack in plant
+	\n-> Guide
+\nChoose this option if you want information on weather conditions, tools, how to plant and nutrition chart.
+	\n-> Read about the application
+\nChoose this option if you want to read this tutorial.
+\n	-> Contact Experts.
+\nChoose this option if you want to contact experts for any advice or discussion.
+\n\nExit the tutorial by clicking the (x) to continue with the application.
+\nHave a great day.
+                </string>
+    <string name="about">About</string>
+    <string name="go_to_weather">go to weather</string>
+    <string name="go_to_plant">go to plant</string>
+    <string name="go_to_tools">go to tools</string>
+    <string name="go_to_nutriinfo">go to nutriinfo</string>
+    <string name="guide">Guide</string>
+    <string name="quit">Quit?</string>
+    <string name="no_network_retry">No Network. Back?</string>
+    <string name="title_activity_tools">Tools</string>
+</resources>

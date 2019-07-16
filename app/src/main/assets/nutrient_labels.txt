@@ -1,0 +1,12 @@
+Coffee Plant
+Daisy Plant
+Nitrogen Deficiency
+Phosphorus Deficiency
+Potassium Deficiency
+Rice Plant
+Rose Plant
+Sugarcane Plant
+Sunflower Plant
+Tea Plant
+Tulip Plant
+Wheat Plant

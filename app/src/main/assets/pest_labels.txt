@@ -1,0 +1,13 @@
+Aphids Pest
+Brown Wheat-mite Pest
+Caseworm Pest
+Coffee Plant
+Daisy Plant
+Rice Plant
+Rose Plant
+Spider-mite Pest
+Sugarcane Plant
+Sunflower Plant
+Tea Plant
+Tulip Plant
+Wheat Plant
