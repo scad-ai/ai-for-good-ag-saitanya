@@ -8,5 +8,5 @@ Edge AI app foundation.
 
 Part of SCAD AI's AI For Good initiatives & collaborations.
 
-Chief Engineer & AI Lead: Sai Tanya Kumbharageri
+Chief Engineer & AI Lead: Sai Tanya Kumbharageri [https://github.com/saitanya]
 
