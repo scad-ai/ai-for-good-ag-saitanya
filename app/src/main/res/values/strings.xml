@@ -45,4 +45,5 @@ Are you a farmer or a gardening enthusiast? Do you generally face issue with dis
     <string name="quit">Quit?</string>
     <string name="no_network_retry">No Network. Back?</string>
     <string name="title_activity_tools">Tools</string>
+    <string name="record">Record</string>
 </resources>

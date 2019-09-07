@@ -22,7 +22,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Home extends Activity{
-    Button d, p, n, i, c,yes,no,cc,call1,call2,call3,msg1,msg2,msg3;
+    Button d, p, n, i, c,yes,no,cc,call1,call2,call3,msg1,msg2,msg3,speech;
     private boolean useCamera2API;
     static String x;
     static String MODEL_FILE;
@@ -103,21 +103,38 @@ public class Home extends Activity{
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                try {
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                }
+                catch (SecurityException e){
+                    Toast.makeText(getApplicationContext(),String.valueOf(e),Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         call2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                try {
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                }
+                catch (SecurityException e){
+                    Toast.makeText(getApplicationContext(),String.valueOf(e),Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         call3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                try {
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                }
+                catch (SecurityException e){
+                    Toast.makeText(getApplicationContext(),String.valueOf(e),Toast.LENGTH_SHORT).show();
+                }
             }
         });
         msg1.setOnClickListener(new View.OnClickListener(){
@@ -192,6 +209,15 @@ public class Home extends Activity{
             public void onClick(View v) {
                 Intent intent;
                 intent = new Intent(v.getContext(), Info.class);
+                startActivity(intent);
+            }
+        });
+        speech = (Button) findViewById(R.id.speech);
+        speech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(v.getContext(), MainActivity.class);
                 startActivity(intent);
             }
         });

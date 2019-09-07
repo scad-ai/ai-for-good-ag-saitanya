@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ksaitanya.agroaid">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -14,13 +15,15 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="Agro-Aid"
-        android:theme="@style/MaterialTheme">
+        android:theme="@style/MaterialTheme"
+        tools:ignore="HardcodedDebugMode">
         <activity
             android:name=".First"
             android:screenOrientation="portrait">
@@ -31,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Identify"
+            android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Info"
@@ -43,7 +46,7 @@
             android:name=".Weather"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Tools"
+            android:name=".Tool"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Plant"
@@ -57,7 +60,6 @@
         <activity
             android:name=".More"
             android:screenOrientation="portrait" />
-        <activity android:name=".Tool"></activity>
     </application>
 
 </manifest>
