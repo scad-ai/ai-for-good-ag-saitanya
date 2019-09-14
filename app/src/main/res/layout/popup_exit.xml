@@ -4,28 +4,18 @@
     android:layout_height="200dp"
     android:layout_gravity="center"
     android:paddingRight="10dp"
-    android:paddingLeft="10dp">
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:id="@+id/relativeLayout"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true"
-    android:gravity="center">
-
-</RelativeLayout>
+    android:paddingLeft="10dp"
+    android:background="#ffffff">
 
     <Button
+        android:id="@+id/button2"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:background="@drawable/yes"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal"
-        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="45dp" />
+        android:layout_centerVertical="true"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/no" />
 
     <TextView
         android:layout_width="match_parent"
@@ -34,6 +24,7 @@
         android:id="@+id/ques"
         android:layout_gravity="center_horizontal"
         android:textSize="35sp"
+        android:textColor="#000000"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
@@ -41,14 +32,13 @@
         android:textAlignment="center" />
 
     <Button
+        android:id="@+id/button"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:background="@drawable/no"
-        android:id="@+id/button2"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignEnd="@+id/ques"
-        android:layout_marginEnd="54dp" />
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginEnd="-100dp"
+        android:background="@drawable/yes" />
 
 </RelativeLayout>

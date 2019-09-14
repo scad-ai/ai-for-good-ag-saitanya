@@ -4,28 +4,18 @@
     android:layout_height="200dp"
     android:layout_gravity="center"
     android:paddingRight="10dp"
-    android:paddingLeft="10dp">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/relativeLayout"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center">
-
-    </RelativeLayout>
+    android:paddingLeft="10dp"
+    android:background="#ffffff">
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:background="@drawable/yes"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal"
+        android:background="@drawable/no"
+        android:id="@+id/button2"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="49dp" />
+        android:layout_marginStart="100dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -38,17 +28,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:textStyle="normal|bold"
+        android:textColor="#000000"
         android:textAlignment="center" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:background="@drawable/no"
-        android:id="@+id/button2"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignEnd="@+id/ques"
-        android:layout_marginEnd="51dp" />
+        android:background="@drawable/yes"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginEnd="-100dp" />
 
 </RelativeLayout>

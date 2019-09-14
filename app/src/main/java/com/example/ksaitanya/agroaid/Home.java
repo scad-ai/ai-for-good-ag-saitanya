@@ -51,8 +51,8 @@ public class Home extends Activity{
     }
     public void onBackPressed() {
         exit.setContentView(R.layout.popup_exit);
-        yes=(Button) exit.findViewById(R.id.button);
-        no=(Button) exit.findViewById(R.id.button2);
+        yes= exit.findViewById(R.id.button);
+        no= exit.findViewById(R.id.button2);
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,7 +104,7 @@ public class Home extends Activity{
             public void onClick(View v)
             {
                 try {
-                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+xxxxxxxxxxx")));
                 }
                 catch (SecurityException e){
                     Toast.makeText(getApplicationContext(),String.valueOf(e),Toast.LENGTH_SHORT).show();
@@ -117,7 +117,7 @@ public class Home extends Activity{
             public void onClick(View v)
             {
                 try {
-                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+xxxxxxxxxxx")));
                 }
                 catch (SecurityException e){
                     Toast.makeText(getApplicationContext(),String.valueOf(e),Toast.LENGTH_SHORT).show();
@@ -130,7 +130,7 @@ public class Home extends Activity{
             public void onClick(View v)
             {
                 try {
-                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+xxxxxxxxxxx")));
                 }
                 catch (SecurityException e){
                     Toast.makeText(getApplicationContext(),String.valueOf(e),Toast.LENGTH_SHORT).show();
@@ -141,7 +141,7 @@ public class Home extends Activity{
             @Override
             public void onClick(View v)
             {
-                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:7893855120"));
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:xxxxxxxxxx"));
                 smsIntent.putExtra("sms_body", "Hello!(Enter your question)");
                 startActivity(smsIntent);
             }
@@ -150,7 +150,7 @@ public class Home extends Activity{
             @Override
             public void onClick(View v)
             {
-                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:7893855120"));
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:xxxxxxxxxx"));
                 smsIntent.putExtra("sms_body", "Hello!(Enter your question)");
                 startActivity(smsIntent);
             }
@@ -159,7 +159,7 @@ public class Home extends Activity{
             @Override
             public void onClick(View v)
             {
-                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:7893855120"));
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:xxxxxxxxxx"));
                 smsIntent.putExtra("sms_body", "Hello!(Enter your question)");
                 startActivity(smsIntent);
             }
@@ -217,7 +217,7 @@ public class Home extends Activity{
             @Override
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(v.getContext(), MainActivity.class);
+                intent = new Intent(v.getContext(), Audio.class);
                 startActivity(intent);
             }
         });

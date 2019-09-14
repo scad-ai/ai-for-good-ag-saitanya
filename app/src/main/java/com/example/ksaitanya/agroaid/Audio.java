@@ -1,5 +1,6 @@
 package com.example.ksaitanya.agroaid;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -11,12 +12,9 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +29,7 @@ import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 
-public class MainActivity extends Activity {
+public class Audio extends Activity {
 
     private static final int SAMPLE_RATE = 16000;
     private static final int SAMPLE_DURATION_MS = 1000;
@@ -43,11 +41,8 @@ public class MainActivity extends Activity {
     private static final long MINIMUM_TIME_BETWEEN_SAMPLES_MS = 30;
     private static final String LABEL_FILENAME = "file:///android_asset/conv_actions_labels.txt";
     private static final String MODEL_FILENAME = "file:///android_asset/conv_actions_frozen.pb";
-
     private static final String INPUT_DATA_NAME = "decoded_sample_data:0";
-
     private static final String SAMPLE_RATE_NAME = "decoded_sample_data:1";
-
     private static final String OUTPUT_SCORES_NAME = "labels_softmax";
     /* private static final String INPUT_DATA_NAME = "conv2d_1_input";
     private static final String SAMPLE_RATE_NAME = "sampleratename";
@@ -55,15 +50,12 @@ public class MainActivity extends Activity {
 
     // UI elements.
     private static final int REQUEST_RECORD_AUDIO = 13;
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
     private final ReentrantLock recordingBufferLock = new ReentrantLock();
+    int button_press = 0;
     // Working variables.
     short[] recordingBuffer = new short[RECORDING_LENGTH];
     int recordingOffset = 0;
     boolean shouldContinue = true;
-    boolean shouldContinueRecognition = true;
-    private Button quitButton;
-    private ListView labelsListView;
     private Thread recordingThread;
     private Thread recognitionThread;
     private TensorFlowInferenceInterface inferenceInterface;
@@ -73,13 +65,14 @@ public class MainActivity extends Activity {
 
     private TextView label,start;
     private Button rb;
+
     Button b,c,more;
     Dialog myDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Set up the UI.
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_audio);
         label = findViewById(R.id.label);
         rb =  findViewById(R.id.rb);
         start = findViewById(R.id.sr);
@@ -124,22 +117,21 @@ public class MainActivity extends Activity {
     public void AboutIdentify(View v) {
         myDialog = new Dialog(this);
         myDialog.setContentView(R.layout.about_identity);
-        TextView about = (TextView) myDialog.findViewById(R.id.aboutiden);
-        c = (Button) myDialog.findViewById(R.id.close);
+        TextView about = myDialog.findViewById(R.id.aboutiden);
+        c = myDialog.findViewById(R.id.close);
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 myDialog.dismiss();
             }
         });
-        String message= "TUTORIAL\n\nThis page will help you identify disease attack in plant and if any disease is identified, you can also view tips on how to treat it and contact expert for further advice, with just one click.\n" +
+        String message= "TUTORIAL\n\nThis page will help you identify audio clips.\n" +
                     "Lets get started.\n\n" +
-                    "To identify disease attack\n" +
-                    "1. Take your phone close to the part of the plant you see the symptoms at. If there are no visible symptoms, put your phone just above a leaf.\n" +
-                    "2. click the camera button so that the app can click the picture of the plant.\n" +
-                    "3. Now wait till the app gives you results on the top.\n" +
+                    "To identify an audio\n" +
+                    "1. Click on the record button to start recording the audio clip.\n" +
+                    "2. Click again to stop recording.\n" +
+                    "3. Once the recording is done, the system will recognize the audio for you and give the result in the textfield.\n" +
                     "4. If it says \"Sorry! Cannot Recognize\", move your phone a little closer or far or change the angle and click again.\n" +
-                    "5. When the app identifies a healthy plant or any disease, a plus (+) symbol will appear along with the result. Click on the plus to read more about what the app identified including fun facts, tips to treat disease and contact options.\n" +
                     "\nExit this tutorial to continue with the app.";
 
         about.setText(message);
@@ -148,7 +140,7 @@ public class MainActivity extends Activity {
     }
 
     public void addListener(View v) {
-        b = (Button) findViewById(R.id.back);
+        b = findViewById(R.id.back);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,25 +149,16 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
-/*        more = (Button) findViewById(R.id.button3);
-        more.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent;
-                intent = new Intent(v.getContext(), More.class);
-                startActivity(intent);
-            }
-        });*/
     }
     @Override
     public void onBackPressed() {
         Intent intent;
-        intent = new Intent(MainActivity.this, Home.class);
+        intent = new Intent(Audio.this, Home.class);
         startActivity(intent);
     }
 
     private void requestMicrophonePermission() {
-        ActivityCompat.requestPermissions(MainActivity.this,
+        ActivityCompat.requestPermissions(Audio.this,
                 new String[]{android.Manifest.permission.RECORD_AUDIO}, REQUEST_RECORD_AUDIO);
     }
 
@@ -214,6 +197,7 @@ public class MainActivity extends Activity {
         recordingThread = null;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void record() {
         android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_AUDIO);
 
@@ -247,19 +231,25 @@ public class MainActivity extends Activity {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                        shouldContinue = true;
-                        start.setText("Start recording");
-                    }
-                    else if (event.getAction() == MotionEvent.ACTION_UP){
-                        start.setText("Find answer");
-                        shouldContinue= false;
+                        button_press +=1;
+                        if( button_press%2 ==1){
+                            shouldContinue = true;
+                            start.setText("Listening");
+                            rb.setBackgroundResource(R.drawable.recording);
+                        }
+                        else{
+                            start.setText("Find answer");
+                            shouldContinue= false;
+                            rb.setBackgroundResource(R.drawable.record);
+                        }
+
                     }
                     return true;
                 }
             });
 
+
             if (shouldContinue){
-                Log.d("Recording", "record: "+ shouldContinue);
                 int numberRead = record.read(audioBuffer, 0, audioBuffer.length);
                 int maxLength = recordingBuffer.length;
                 int newRecordingOffset = recordingOffset + numberRead;
@@ -305,7 +295,6 @@ public class MainActivity extends Activity {
         // Loop, grabbing recorded data and running the recognition model on it.
         while (true) {
             if (!shouldContinue){
-                Log.d("Recognising", "Recognize: "+ !shouldContinue);
                 // The recording thread places data in this round-robin buffer, so lock to
                 // make sure there's no writing happening and then copy it to our own
                 // local version.

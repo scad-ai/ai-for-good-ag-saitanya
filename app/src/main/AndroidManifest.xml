@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Audio"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Info"

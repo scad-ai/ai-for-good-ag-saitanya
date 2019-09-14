@@ -1,18 +1,22 @@
 package com.example.ksaitanya.agroaid;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class More extends Activity {
-TextView details;
-    Button b,call1,call2,call3,msg1,msg2,msg3;
+    TextView details;
+    Button b, call1, call2, call3, msg1, msg2, msg3;
     RelativeLayout expert;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,13 +35,14 @@ TextView details;
         fillDetails();
         contactExperts();
     }
+
     public void onBackPressed() {
         Intent intent;
         intent = new Intent(More.this, ClassifierActivity.class);
         startActivity(intent);
     }
 
-    public void contactExperts(){
+    public void contactExperts() {
         call1 = (Button) findViewById(R.id.call1);
         call2 = (Button) findViewById(R.id.call2);
         call3 = (Button) findViewById(R.id.call3);
@@ -45,32 +50,44 @@ TextView details;
         msg2 = (Button) findViewById(R.id.msg2);
         msg3 = (Button) findViewById(R.id.msg3);
 
-        call1.setOnClickListener(new View.OnClickListener(){
+
+        call1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+            public void onClick(View v) {
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(More.this, new String[]{android.Manifest.permission.CALL_PHONE,
+                            android.Manifest.permission.SEND_SMS}, 101);
+                }
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+xxxxxxxxxx")));
             }
         });
         call2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(More.this, new String[]{android.Manifest.permission.CALL_PHONE,
+                            android.Manifest.permission.SEND_SMS}, 101);
+                }
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+xxxxxxxxxx")));
             }
         });
         call3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+917893855120")));
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(More.this, new String[]{android.Manifest.permission.CALL_PHONE,
+                            android.Manifest.permission.SEND_SMS}, 101);
+                }
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+xxxxxxxxxx")));
             }
         });
         msg1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
-                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:7893855120"));
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:xxxxxxxxxx0"));
                 smsIntent.putExtra("sms_body", "Agro Aid detected "+RecognitionScoreView.a+" in my plant. I request call back for expert advice");
                 startActivity(smsIntent);
             }
@@ -79,7 +96,7 @@ TextView details;
             @Override
             public void onClick(View v)
             {
-                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:7893855120"));
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:xxxxxxxxxx"));
                 smsIntent.putExtra("sms_body", "Agro Aid detected "+RecognitionScoreView.a+" in my plant. I request call back for expert advice");
                 startActivity(smsIntent);
             }
@@ -88,7 +105,7 @@ TextView details;
             @Override
             public void onClick(View v)
             {
-                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:7893855120"));
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:xxxxxxxxxx"));
                 smsIntent.putExtra("sms_body", "Agro Aid detected "+RecognitionScoreView.a+" in my plant. I request call back for expert advice");
                 startActivity(smsIntent);
             }

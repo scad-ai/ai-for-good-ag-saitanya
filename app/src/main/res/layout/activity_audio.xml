@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/allback"
-    tools:context="com.example.ksaitanya.agroaid.MainActivity">
+    tools:context="com.example.ksaitanya.agroaid.Audio">
 
     <TextView
         android:id="@+id/textView5"
@@ -19,7 +19,7 @@
         android:paddingLeft="20dp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:text="Sound Recognition"
+        android:text="AUDIO TAGGING"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffffff"
         android:textSize="25dp"
@@ -63,24 +63,26 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="256dp"
         android:layout_marginRight="20dp"
+        android:gravity="center"
         android:background="#fff"
         android:textSize="36sp" />
 
     <Button
         android:id="@+id/rb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
-        android:text="@string/record" />
+        android:layout_marginBottom="5dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/record"/>
 
     <TextView
         android:id="@+id/sr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="81dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="150dp"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

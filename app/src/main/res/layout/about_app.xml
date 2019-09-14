@@ -3,16 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:background="#8e8e8e">
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@android:drawable/ic_delete"
-        android:id="@+id/close"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+    android:background="#ffffff">
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -21,12 +13,11 @@
             android:fillViewport="false"
             android:scrollbars="none"
             android:scrollbarStyle="insideOverlay"
-            android:layout_below="@id/close"
+            android:layout_above="@id/close"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="7dp"
-            android:background="#d82a0102">
+            android:paddingBottom="7dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,8 +25,17 @@
                 android:text="@string/abouttext"
                 android:id="@+id/abouttext"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#ffffff" />
+                android:textStyle="bold"/>
         </ScrollView>
 
+    <Button
+        android:id="@+id/close"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:text="Dismiss"
+        android:textSize="20sp" />
 </RelativeLayout>

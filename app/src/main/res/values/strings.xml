@@ -7,34 +7,21 @@
     <string name="pest">Pest Attack</string>
     <string name="nutrient">Nutrient Deficiency</string>
     <string name="back">Back</string>
-    <string name="abouttext">Developers:\n
-K. Sai Tanya\n
-R. Meghana\n
-Electronics and Computer Engineering\n
-Sreenidhi Institute of Science and Technology\n
-Welcome to our application - Agro Aid.\n
-Are you a farmer or a gardening enthusiast? Do you generally face issue with disease/pest attack and nutrient deficiency for your plant? Over time, the severity of these problems has increased and resulted in losses of crop and plants.
-    \nAccording to a study by the Associated Chambers of Commerce and Industry of India, the annual crop losses amount to Rs.50,000 crore($500 billion) due to disease attack, pest attack and nutrient deficiency.
+    <string name="abouttext">
+        Agro-Aid: An Ag Citizen Science App\nChief Engineer AI Lead: Sai Tanya Kumbharageri\nSCAD AI\'s AI For Good initiatives  collaborations.\n\n
 
-\n\n"<i>Concerted efforts are needed to forge an R and D-led strategy to save the loss of crops due to pests, weeds and diseases.</i>"
-\n-Hukmdev Narayan Yadav
-\nChairman, Standing Committee of parliament on Agriculture and Farmers Welfare in 2016.
-\n\nIn the vision for digital India, the government is looking for digital solutions enabling identification of disease attacks, pest attacks and nutrient deficiency and take appropriate steps in real time. Taking the inspiration, our project goal is to develop a simple application for    phones that can identify crop diseases, pest damages and nutrient deficiency symptoms by analyzing the pictures taken by the user. So lets this started with the app.
-\nThis is the Home page with 6 options.
-	\n-> Identify Nutrient Deficiency.
-\nChoose this option if you want to identify any nutrient deficiency in plant.
-	\n-> Identify Disease attack
-\nChoose this option if you want to identify any disease attack in plant.
-	\n-> Identify Pest attack
-\nChoose this option if you want to identify any pest attack in plant
-	\n-> Guide
-\nChoose this option if you want information on weather conditions, tools, how to plant and nutrition chart.
-	\n-> Read about the application
-\nChoose this option if you want to read this tutorial.
-\n	-> Contact Experts.
-\nChoose this option if you want to contact experts for any advice or discussion.
-\n\nExit the tutorial by clicking the (x) to continue with the application.
-\nHave a great day.
+        Welcome to the homepage of Agro-Aid, an app built as a foundation for vision-ai in crop disease, plant malnutrition and pest attack.
+        Further, the app is also capable of audio tagging through AI.\n
+        The homepage is provided with 7 options
+        \n• Nutrient Deficiency: To identify any nutrient deficiency in plant.
+        \n• Disease Attack: To identify any disease attack in plant.
+        \n• Pest Attack: To identify any pest attack in plant
+        \n• Audio Tagging: To classify a sound
+        \n• Guide: To read information on current weather, tools and more.
+        \n• About: To open this tutorial.
+        \n• Contact: To get in touch with us.
+        \n\nExit the tutorial to continue with the application.
+        \nHave a great day.
                 </string>
     <string name="about">About</string>
     <string name="go_to_weather">go to weather</string>
@@ -46,4 +33,6 @@ Are you a farmer or a gardening enthusiast? Do you generally face issue with dis
     <string name="no_network_retry">No Network. Back?</string>
     <string name="title_activity_tools">Tools</string>
     <string name="record">Record</string>
+    <string name="aloe_vera">Aloe Vera</string>
+    <string name="to_plant_a_paddy_crop_while_farmers_use_land_indoor_plantation_can_be_done_in_a_garden_or_a_bucket_n1_obtain_rice_seeds_from_any_gardening_or_farmer_s_supply_store_you_may_also_take_help_from_the_local_agriculture_field_officer_n2_choose_the_location_with_a_long_warm_growing_season_of_3_to_6_months_min_21_celsius_n3_if_using_buckets_fill_them_with_6_inches_of_moist_soil_n4_soak_the_seeds_in_water_for_12_to_30_hours_before_sowing_n5_plant_the_soaked_seeds_throughout_the_soil_during_the_fall_or_spring_season_preferably_in_rows_n6_to_prevent_crowding_space_out_the_rice_seeds_n_gap_between_seeds_not_more_than_4_inches_apart_n_gap_between_rows_9_to_12_inches_apart_n7_fill_the_soil_with_more_than_2_inches_of_water_n8_keeping_the_soil_constantly_wet_observe_the_water_levels_n9_wait_until_the_plants_are_about_17_inches_tall_when_the_rice_grains_mature_n10_dry_out_any_excess_water_and_let_the_plants_turn_gold_n11_cut_the_stalks_and_let_the_seeds_dry_n12_bake_them_for_an_hour_at_the_temperature_of_180_f_82_c_n13_in_the_end_separate_the_kernels_from_the_hulls"><![CDATA[To plant a paddy crop, while farmers use land, indoor plantation can be done in a garden or a bucket. 1. Obtain rice seeds from any gardening or farmer’s supply store. You may also take help from the local agriculture field officer. 2. Choose the location with a long, warm growing season of 3 to 6 months (min 21° Celsius). 3. If using buckets, fill them with 6 inches of moist soil. 4. Soak the seeds in water for 12 to 30 hours, before sowing. 5. Plant the soaked seeds throughout the soil, during the fall or spring season, preferably in rows. 6. To prevent crowding, space out the rice seeds.  -> Gap between seeds: Not more than 4 inches apart.  -> Gap between rows: 9 to 12 inches apart. 7. Fill the soil with more than 2 inches of water. 8. Keeping the soil constantly wet, observe the water levels. 9. Wait until the plants are about 17 inches tall, when the rice grains mature. 10. Dry out any excess water and let the plants turn gold. 11. Cut the stalks and let the seeds dry. 12. Bake them for an hour, at the temperature of 180°F (82°C). 13. In the end, separate the kernels from the hulls.]]></string>
 </resources>
