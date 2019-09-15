@@ -1,3 +1,5 @@
+_silence_
+_unknown_
 Acoustic_guitar
 Applause
 Bark

@@ -12,12 +12,14 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.tensorflow.TensorFlow;
 
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
@@ -25,31 +27,27 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 
+
 public class Audio extends Activity {
 
-    private static final int SAMPLE_RATE = 16000;
-    private static final int SAMPLE_DURATION_MS = 1000;
+    private static final int SAMPLE_RATE = 44100;
+    private static final int SAMPLE_DURATION_MS = 5000;
     private static final int RECORDING_LENGTH = (int) (SAMPLE_RATE * SAMPLE_DURATION_MS / 1000);
-    private static final long AVERAGE_WINDOW_DURATION_MS = 500;
-    private static final float DETECTION_THRESHOLD = 0.70f;
-    private static final int SUPPRESSION_MS = 1500;
-    private static final int MINIMUM_COUNT = 3;
+
     private static final long MINIMUM_TIME_BETWEEN_SAMPLES_MS = 30;
-    private static final String LABEL_FILENAME = "file:///android_asset/conv_actions_labels.txt";
-    private static final String MODEL_FILENAME = "file:///android_asset/conv_actions_frozen.pb";
-    private static final String INPUT_DATA_NAME = "decoded_sample_data:0";
+    private static final String LABEL_FILENAME = "file:///android_asset/labels.txt";
+    private static final String MODEL_FILENAME = "file:///android_asset/my_model.pb";
+    private static final String INPUT_DATA_NAME = "conv2d_1_input_2:0";
     private static final String SAMPLE_RATE_NAME = "decoded_sample_data:1";
-    private static final String OUTPUT_SCORES_NAME = "labels_softmax";
-    /* private static final String INPUT_DATA_NAME = "conv2d_1_input";
-    private static final String SAMPLE_RATE_NAME = "sampleratename";
-    private static final String OUTPUT_SCORES_NAME = "output_1";*/
+    private static final String OUTPUT_SCORES_NAME = "dense_1_2/Softmax:0";
 
     // UI elements.
-    private static final int REQUEST_RECORD_AUDIO = 13;
+    private static final int REQUEST_RECORD_AUDIO = 5;
     private final ReentrantLock recordingBufferLock = new ReentrantLock();
     int button_press = 0;
     // Working variables.
@@ -59,11 +57,13 @@ public class Audio extends Activity {
     private Thread recordingThread;
     private Thread recognitionThread;
     private TensorFlowInferenceInterface inferenceInterface;
+    private TensorFlow tf;
     private List<String> labels = new ArrayList<String>();
     private List<String> displayedLabels = new ArrayList<>();
-    private RecognizeCommands recognizeCommands = null;
 
     private TextView label,start;
+    private int m = 0;
+    private Boolean outputAvail = false;
     private Button rb;
 
     Button b,c,more;
@@ -97,14 +97,6 @@ public class Audio extends Activity {
 
 
         // Set up an object to smooth recognition results to increase accuracy.
-        recognizeCommands =
-                new RecognizeCommands(
-                        labels,
-                        AVERAGE_WINDOW_DURATION_MS,
-                        DETECTION_THRESHOLD,
-                        SUPPRESSION_MS,
-                        MINIMUM_COUNT,
-                        MINIMUM_TIME_BETWEEN_SAMPLES_MS);
 
         // Load the TensorFlow model.
         inferenceInterface = new TensorFlowInferenceInterface(getAssets(), MODEL_FILENAME);
@@ -287,8 +279,9 @@ public class Audio extends Activity {
 
     private void recognize() {
         short[] inputBuffer = new short[RECORDING_LENGTH];
-        float[] floatInputBuffer = new float[RECORDING_LENGTH];
-        float[] outputScores = new float[labels.size()];
+        float[] floatInputBuffer = new float[55168];
+
+        final float[] outputScores = new float[labels.size()];
         String[] outputScoresNames = new String[]{OUTPUT_SCORES_NAME};
         int[] sampleRateList = new int[]{SAMPLE_RATE};
 
@@ -311,32 +304,36 @@ public class Audio extends Activity {
 
                 // We need to feed in float values between -1.0f and 1.0f, so divide the
                 // signed 16-bit inputs.
-                for (int i = 0; i < RECORDING_LENGTH; ++i) {
-                    floatInputBuffer[i] = inputBuffer[i] / 32767.0f;
+                for (int i = 0; i < 55168; ++i) {
+                    floatInputBuffer[i] = inputBuffer[i] ;
                 }
-
-                // Run the model.
-                inferenceInterface.feed(SAMPLE_RATE_NAME, sampleRateList);
-                inferenceInterface.feed(INPUT_DATA_NAME, floatInputBuffer, RECORDING_LENGTH, 1);
+                         // Run the model.
+                inferenceInterface.feed(INPUT_DATA_NAME, floatInputBuffer, 1,128, 431, 1);
                 inferenceInterface.run(outputScoresNames);
                 inferenceInterface.fetch(OUTPUT_SCORES_NAME, outputScores);
 
-                // Use the smoother to figure out if we've had a real recognition event.
-                long currentTime = System.currentTimeMillis();
-                final RecognizeCommands.RecognitionResult result = recognizeCommands.processLatestResults(outputScores, currentTime);
 
+                m = 0;
+
+                for (int i = 0; i < outputScores.length; i++) {
+                    m = outputScores[i] > outputScores[m] ? i : m;
+                    Log.d(labels.get(i),String.valueOf(outputScores[i]));
+                }
+
+                if(outputScores[m]>0.6){
+                    outputAvail = true;
+                }
                 runOnUiThread(
                         new Runnable() {
                             @Override
                             public void run() {
-                                // If we do have a new command, highlight the right list entry.
-                                if (!result.foundCommand.startsWith("_") && result.isNewCommand) {
-                                    if(result.score>0.6){
-                                    label.setText(result.foundCommand);}
-                                    else{
-                                        label.setText("Sorry! Cannot Recognize");
-                                    }
+                                if(outputAvail){
+                                    label.setText(labels.get(m));
                                 }
+                                else{
+                                    label.setText("Sorry! Couldn't recognize");
+                                }
+
                             }
                         });
                 try {
